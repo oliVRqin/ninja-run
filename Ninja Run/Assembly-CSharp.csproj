@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{592BC38D-E663-F75B-2490-9B2C28C723C4}</ProjectGuid>
+    <ProjectGuid>{5B232400-7E12-F187-53C4-41BF2817847E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -59,20 +59,21 @@
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Success.cs" />
      <Compile Include="Assets\Scripts\CharacterController2D.cs" />
+     <Compile Include="Assets\TutorialManager.cs" />
      <Compile Include="Assets\PlatformScript.cs" />
+     <Compile Include="Assets\startButton.cs" />
+     <Compile Include="Assets\tutorialButton.cs" />
      <Compile Include="Assets\Scripts\Spikes.cs" />
+     <Compile Include="Assets\MenuManager.cs" />
+     <Compile Include="Assets\menuButton.cs" />
+     <Compile Include="Assets\creditsButton.cs" />
      <Compile Include="Assets\Scripts\CoinScript.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
+     <Compile Include="Assets\CreditsManager.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\MenuManager.cs" />
-     <Compile Include="Assets\startButton.cs" />
-     <Compile Include="Assets\TutorialManager.cs" />
-     <Compile Include="Assets\tutorialButton.cs" />
-     <Compile Include="Assets\CreditsManager.cs" />
-     <Compile Include="Assets\creditsButton.cs" />
      <Compile Include="Assets\quitButton.cs" />
-     <Compile Include="Assets\menuButton.cs" />
+     <Compile Include="Assets\MyUnitySingleton.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -95,85 +96,85 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Runtime">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Path.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Triangle.Runtime">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="PsdPlugin">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/PsdPlugin.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Psdimporter.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEngineBridge.001">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Runtime">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.SpriteShape.Runtime">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.PixelPerfect">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Animation.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Common.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.InternalAPIEditorBridge.001">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -712,11 +713,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.Editor.csproj">
-      <Project>{A3FE3121-97DC-2799-64F9-E8404950F053}</Project>
+      <Project>{2F05630A-AABA-A248-C3EA-67DF3DA4A4A4}</Project>
       <Name>Unity.2D.Tilemap.Extras.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{51DA35F7-48CC-00CA-8CA8-A5B40C2A23AA}</Project>
+      <Project>{CF03D0DB-07DF-33FC-F482-599759685A6B}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>

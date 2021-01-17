@@ -17,10 +17,14 @@ public class GameManager : MonoBehaviour
     // UI variables
     public Text messageOverlay;
     public Text messageCount;
+    public Text messageLives;
+    public Text messageTotalCount;
 
     // Game variables
     private bool isAlive = true;
     private int currScore = 0;
+    private static int finalScore = 0;
+    private static int numLives = 5;
 
     // player variables
     public GameObject playerPrefab;
@@ -42,7 +46,11 @@ public class GameManager : MonoBehaviour
         gameState = GameState.menu;
         isAlive = true;
         messageCount.enabled = true;
-        messageCount.text = "Count: " + currScore;
+        messageCount.text = "Score: " + currScore;
+        messageLives.enabled = true;
+        messageLives.text = "Lives: " + numLives;
+        messageTotalCount.enabled = true;
+        messageTotalCount.text = "Cumulative Score: " + finalScore;
     }
 
     // Update is called once per frame
@@ -53,18 +61,8 @@ public class GameManager : MonoBehaviour
             StartANewGame();
         } else if (gameState == GameState.gameOver)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                RestartLevel();
-                StartANewGame();
-            }
         } else if (gameState == GameState.success)
         {
-            if (Input.GetKeyDown(KeyCode.R))
-            {
-                RestartLevel();
-                StartANewGame();
-            }
         } else {
             if (playerPrefab.transform.position.y <= -5) 
             {
@@ -76,14 +74,15 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
-        // reload this scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void StartANewGame()
     {
         currScore = 0;
-        messageCount.text = "Count: " + currScore;
+        messageCount.text = "Score: " + currScore;
+        messageLives.text = "Lives: " + numLives;
+        messageTotalCount.text = "Cumulative Score: " + finalScore;
         playerPrefab.transform.position = new Vector3(0,-0.6f,0);
         playerPrefab.gameObject.SetActive(true);
         ResetRound();
@@ -98,17 +97,15 @@ public class GameManager : MonoBehaviour
     public IEnumerator GetReadyState()
     {
         messageOverlay.enabled = true;
-        messageOverlay.text = "Get Ready!!!";
-
-        yield return new WaitForSeconds(2.0f);
-
+        messageOverlay.text = "Let's go!!!";
+        yield return new WaitForSeconds(0.5f);
         messageOverlay.enabled = false;
     }
 
     public void EnemyDestroyed()
     {
         currScore += 10;
-        messageCount.text = "Count: " + currScore;
+        messageCount.text = "Score: " + currScore;
     }
 
     public void PlayerDestroyed()
@@ -121,29 +118,45 @@ public class GameManager : MonoBehaviour
     public void CoinCollected()
     {
         currScore++;
-        messageCount.text = "Count: " + currScore;
+        messageCount.text = "Score: " + currScore;
     }
-
+    bool playerWonHappened = false;
     public void PlayerWon()
     {
-        StartCoroutine(OopsState());
+        if (playerWonHappened == false) {
+            StartCoroutine(OopsState());
+            playerWonHappened = true;
+        }
     }
-
+    
     public IEnumerator OopsState()
     {
         gameState = GameState.oops;
-
         if (isAlive == false){
             gameState = GameState.gameOver;
-            messageOverlay.enabled = true;
-            messageOverlay.text =  " Game Over: You Lose ";
-            yield return new WaitForSeconds(2.0f);
-            messageOverlay.text =  " Press 'R' to Restart ";
+            numLives -= 1;
+            messageLives.text = "Lives: " + numLives;
+            if (numLives <= 0) {
+                messageOverlay.enabled = true;
+                finalScore += currScore;
+                messageOverlay.text =  $"Better luck next time! \n Final Score: {finalScore}";
+                yield return new WaitForSeconds(3.0f);
+                SceneManager.LoadScene("MainMenu");
+                numLives = 5;
+                finalScore = 0;
+            } else {
+                messageOverlay.enabled = true;
+                messageOverlay.text =  (numLives != 1) ? $"Ouch! You have {numLives} lives left" : $"Ouch! You have {numLives} life left";
+                yield return new WaitForSeconds(3.0f);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         } else {
             gameState = GameState.success;
+            finalScore += currScore;
             if (SceneManager.GetActiveScene().name == "Level1") {
                 messageOverlay.enabled = true;
-                messageOverlay.text =  " Game Over: You Win ";
+                numLives++;
+                messageOverlay.text =  " Hooray, you passed the first level! ";
                 yield return new WaitForSeconds(2.0f);
                 messageOverlay.text =  "Level 2 in 3...";
                 yield return new WaitForSeconds(1.0f);
@@ -151,10 +164,12 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(1.0f);
                 messageOverlay.text =  "Level 2 in 1...";
                 yield return new WaitForSeconds(1.0f);
+                playerWonHappened = false;
                 SceneManager.LoadScene("Level2");
             } else if (SceneManager.GetActiveScene().name == "Level2") {
                 messageOverlay.enabled = true;
-                messageOverlay.text =  " Game Over: You Win ";
+                numLives++;
+                messageOverlay.text =  $" Hooray, you passed the second level! ";
                 yield return new WaitForSeconds(2.0f);
                 messageOverlay.text =  "Level 3 in 3...";
                 yield return new WaitForSeconds(1.0f);
@@ -162,10 +177,12 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(1.0f);
                 messageOverlay.text =  "Level 3 in 1...";
                 yield return new WaitForSeconds(1.0f);
+                playerWonHappened = false;
                 SceneManager.LoadScene("Level3");
             } else if (SceneManager.GetActiveScene().name == "Level3") {
                 messageOverlay.enabled = true;
-                messageOverlay.text =  " Game Over: You Win ";
+                numLives++;
+                messageOverlay.text =  $" Hooray, you passed the third level! ";
                 yield return new WaitForSeconds(2.0f);
                 messageOverlay.text =  "Final Level in 3...";
                 yield return new WaitForSeconds(1.0f);
@@ -173,10 +190,12 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(1.0f);
                 messageOverlay.text =  "Final Level in 1...";
                 yield return new WaitForSeconds(1.0f);
+                playerWonHappened = false;
                 SceneManager.LoadScene("BossScene");
             } else if (SceneManager.GetActiveScene().name == "BossScene") {
+                messageTotalCount.enabled = false;
                 messageOverlay.enabled = true;
-                messageOverlay.text =  " Game Over: You Win! ";
+                messageOverlay.text =  $" Game Over: You Win! \n Final Score: {finalScore} ";
                 yield return new WaitForSeconds(2.0f);
                 messageOverlay.text =  "Main Menu in 3...";
                 yield return new WaitForSeconds(1.0f);
@@ -184,6 +203,7 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(1.0f);
                 messageOverlay.text =  "Main Menu in 1...";
                 yield return new WaitForSeconds(1.0f);
+                playerWonHappened = false;
                 SceneManager.LoadScene("MainMenu");
             }
         }

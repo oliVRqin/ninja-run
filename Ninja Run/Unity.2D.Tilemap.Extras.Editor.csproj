@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7CE20F70-3E09-1FFD-B4E3-3B28918C986F}</ProjectGuid>
+    <ProjectGuid>{27022F8E-A2A7-480A-6691-B64F7F272456}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Editor</AssemblyName>
@@ -81,19 +81,19 @@
      <None Include="Packages\2d-extras-master\Editor\Tiles\RuleTile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
      <None Include="Packages\2d-extras-master\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
  <Reference Include="Unity.2D.Tilemap.Editor">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -291,7 +291,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -647,7 +647,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.2D.Tilemap.Extras.csproj">
-      <Project>{51DA35F7-48CC-00CA-8CA8-A5B40C2A23AA}</Project>
+      <Project>{CF03D0DB-07DF-33FC-F482-599759685A6B}</Project>
       <Name>Unity.2D.Tilemap.Extras</Name>
     </ProjectReference>
   </ItemGroup>

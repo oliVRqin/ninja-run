@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{72DE776C-C0A7-106D-D5D4-E7A9A9E7549B}</ProjectGuid>
+    <ProjectGuid>{9F996471-A6AD-A485-AA48-4FAE90644945}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras.Placeholder.EditorTests</AssemblyName>
@@ -58,16 +58,16 @@
      <Compile Include="Packages\2d-extras-master\Tests\Editor\PlaceholderTests.cs" />
      <None Include="Packages\2d-extras-master\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -265,7 +265,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

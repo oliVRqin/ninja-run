@@ -11,7 +11,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A7446686-1259-1B52-6856-5B9C54510BAA}</ProjectGuid>
+    <ProjectGuid>{A75A3FAC-1594-6B6E-74BA-337B1449040C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras</AssemblyName>
@@ -70,10 +70,10 @@
      <None Include="Packages\2d-extras-master\Runtime\Unity.2D.Tilemap.Extras.asmdef" />
      <None Include="Packages\2d-extras-master\Runtime\Brushes\TintedTilemap.shader" />
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/oliverqin/Desktop/Lesson 7_ 2D SideScroller/Vikings/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/oliverqin/Desktop/NinjaRun/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2020.1.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
